@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+<h1 id="class_detail_title">{{post.title}}</h1>
+<div class="class_detail">
+    {% if post.image %}
+    <div class ="class_detail_img">
+    <img src="{{post.image.url}}" height=400 width=85%>
+    {% endif %}
+    </div>
+    
+    
+    <div class = "class_detail_content">
+    <p>이름: {{post.tutor_name}}</p>
+    <p>경력: {{post.tutor_career}}</p>
+    <p>강의내용 : {{post.class_info|linebreaksbr}}</p>
+    </div>
+</div>
+</center>
+
+
+<span id="user_name"></span>
+{% if post.tutor_id == user.username %}
+<a href="{% url 'class_edit' index=post.pk %}">수정하기</a>
+<a href="{% url 'class_remove' pk=post.pk %}" onclick="return confirm('정말 삭제하시겠습니까?')">삭제하기</a>
+{% endif %}
+
+<center><button id="class_detail_button">신청하기</button></center>
+
+
+{% endblock %}

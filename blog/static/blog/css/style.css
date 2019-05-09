@@ -1,0 +1,269 @@
+@import url('https://fonts.googleapis.com/css?family=Do+Hyeon&subset=korean');
+
+.collapse navbar-collapse{
+    color: white;
+}
+.category {
+  text-align : center;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-template-rows: 60px;
+  grid-template-areas: "cate1 cate2 cate3";
+}
+.buttonset{
+    text-align: center;
+}
+button.navbar-toggler:focus{
+    outline:none;
+}
+.navbar-dark .navbar-toggler{
+    border:none;
+}
+.carousel-item:nth-child(1){
+    background-image: url(../image/class.jpg);
+}
+.carousel-item:nth-child(2){
+    background-image: url(../image/jooho.jpg);
+}
+.carousel-item:nth-child(3){
+    background-image: url(../image/campus.jpg);
+}
+.carousel-item{
+    height: 50vh;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Do Hyeon', sans-serif;
+    font-weight: bold;
+}
+.blocking{
+    display:flex;
+    justify-content:center;
+}
+.clubs{
+    padding: 60px 0;
+    text-align: center;
+}
+.signup{
+    margin-top: 99px;
+}
+.signup label{
+    display:none;
+}
+.signup input[type = "text"], .signup input[type = "password"], .signup input[type = "email"]{
+    color:#000000;
+    background-color:#ffe9c4;
+    font-size: 12px;
+    width:300px;
+    padding: 3px 0px;
+    text-align: center;
+    border: 2px solid #fcd683;
+    outline: none;
+    border-radius: 18px;
+    transition: 0.25px;
+}
+
+.signup label{
+    font-family: 'Jua', sans-serif;;
+    font-size:18px;
+}
+.login input[type = "text"], .login input[type = "password"]{
+    color:#000000;
+    background-color:#ffe9c4;
+    font-size: 12px;
+    width:300px;
+    padding: 3px 0px;
+    text-align: center;
+    border: 2px solid #fcd683;
+    outline: none;
+    border-radius: 18px;
+    transition: 0.25px;
+}
+.login label{
+    display:none;
+}
+.login{
+    margin-top:99px;
+}
+#loginbutton1, #loginbutton2{
+    margin: 10px auto;
+    font-size:18px;
+    height:35px;
+    width:100px;
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+    font-family: 'Jua', sans-serif;;
+}
+#signupbutton1, #signupbutton2{
+    margin: 10px auto;
+    font-size:18px;
+    height:35px;
+    width:100px;
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+    font-family: 'Jua', sans-serif;;
+}
+
+.w3-container{
+    margin : 0px 0px 0px 0px;
+}
+.requestpost{
+    margin-top:50px;
+}
+.class_request{
+    text-align:center;
+    font-family: 'Do Hyeon', sans-serif;;
+    margin:3px 3px 3px 3px;
+    font-size:19px;
+    justify-content : center;
+}
+.requestpost label{
+    display:none;
+}
+.requestpost input{
+    color:#000000;
+    background-color:#ffe9c4;
+    font-size: 12px;
+    width:300px;
+    padding: 3px 0px;
+    text-align: center;
+    border: 2px solid #fcd683;
+    outline: none;
+    border-radius: 18px;
+    transition: 0.25px;
+}
+.card{
+    border:1px solid;
+    margin: 3px 3px 3px 3px;
+    border-radius: 18px;
+    margin-top: 10px;
+    height:350px;
+}
+#thebaeum{
+    font-size:19px;
+}
+.card img{
+    height:225px;
+    border:1px;
+    border-radius: 19px 19px 10px 10px;
+}
+.request_div{
+    text-align: center;
+}
+.nav-header{
+    background-color:black;
+    font-family: 'Jua', sans-serif;;
+    font-size:18px;
+    color:white;
+}
+.nav-contents{
+    color:white;
+    
+}
+.nav-contents:hover {
+    color:#ffb963;
+}
+
+.class_apply{
+    margin-top:89px;
+}
+.class_apply input, .class_apply textarea{
+    color:#000000;
+    background-color:#ffe9c4;
+    font-size: 12px;
+    width:300px;
+    padding: 3px 0px;
+    text-align: center;
+    border: 2px solid #fcd683;
+    outline: none;
+    border-radius: 18px;
+    transition: 0.25px;
+}
+#class_apply_button1, #class_apply_button2{
+    margin: 10px auto;
+    font-size:18px;
+    height:35px;
+    width:100px;
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+    font-family: 'Jua', sans-serif;;
+}
+.class_apply label{
+    display:none;
+}
+#class_request_button{
+    margin: 10px auto;
+    font-size:18px;
+    height:35px;
+    width:100px;
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+    font-family: 'Jua', sans-serif;;
+}
+.class_detail_img{
+    border-radius:18px;
+    margin-top:6% auto;
+    float:left;
+    padding-right:10px;
+    width:50%;
+}
+.class_detail_img img{
+    border-radius:18px;
+}
+.class_detail{
+    justify-content:center;
+    display:flex;
+    text-align: center;
+    border-radius:18px;
+    background-color: #fffbf4;
+    padding: 20px;
+    border: 1px solid #888;
+    height:450px;
+    width: 80%; /* Could be more or less, depending on screen size */
+    overflow: auto; /* Enable scroll if needed */
+}
+.class_detail label{
+    display:none;
+}
+.class_detail_content{
+    font-size: 25px;
+    font-family: 'Do Hyeon', sans-serif;
+    width:50%;
+    text-align:left;
+    padding-left:10px;
+}
+#class_detail_title{
+    color:#ffb963;
+    font-weight:bold;
+}
+.hidden{
+    display:none;
+}
+#class_detail_button{
+    margin-top:6px;
+    font-size:18px;
+    height:35px;
+    width:100px;
+    padding:5px 15px;
+    background:#ccc;
+    border:0 none;
+    cursor:pointer;
+    border-radius: 5px;
+    font-family: 'Jua', sans-serif;;
+}
+#class_detail_title{
+    margin-top: 50px
+}

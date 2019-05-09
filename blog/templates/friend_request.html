@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+<div>
+    {% for n in ns %}
+    <div>신청한 친구 : {{n.from_user}} 
+    <form method="POST">
+        {% csrf_token %}
+        <input type="hidden" name="from_user" value="{{n.from_user.pk}}">
+    승락<input type="radio" name="accepted" value=False>
+    거절<input type="radio" name="accepted" value=True>
+    <input type="submit" value="저장">
+    </form>
+    </div>
+    {%endfor%}
+</div>
+<div>
+    {% for c in cs %}
+    <div>곧 만날 친구 : {{c.from_user}}</div>
+    {%endfor%}
+</div>
+</center>
+{% endblock %}

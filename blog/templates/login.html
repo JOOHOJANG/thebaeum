@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+
+<center>
+<div class = "login">
+<form method="post" action="">
+    {% csrf_token %}
+    
+      {% for field in form %}
+      <p class = "signup_input">
+        {{ field.label_tag }}<br>
+        {{ field }}
+        {% if field.help_text %}
+          <small style="display: none">{{ field.help_text }}</small>
+        {% endif %}
+        {% for error in field.errors %}
+          <p style="color: red">{{ error }}</p>
+        {% endfor %}
+      </p>
+      {% endfor %}
+    <input id="loginbutton1" type="submit" value="로그인">&nbsp;
+    <input id="loginbutton2" type="button" onclick="location.href='/'" value="뒤로가기">
+</form>
+</div>
+</center>
+<script>
+  document.getElementById("id_username").setAttribute("placeholder", "아이디");
+  document.getElementById("id_password").setAttribute("placeholder", "비밀번호");
+</script>
+
+{% endblock %}

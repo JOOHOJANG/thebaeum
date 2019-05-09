@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if not user.is_authenticated %}
+<script type="text/javascript">
+  alert('잘못된 접근입니다. \n수업 등록을 하려면 로그인이 필요합니다.')
+  window.location.href = '/';
+</script>
+{% else %}
+<center>
+<div class="class_apply">
+<form method="POST" class="post-form" enctype="multipart/form-data">{% csrf_token %}
+    {{form.as_p}}
+    <button id="class_apply_button1" type = "submit">저장</button>
+    <input type="button" id="class_apply_button2" onclick="location.href='/'" value="뒤로가기">
+</form>
+</div>
+</center>
+<script>
+  document.getElementById('id_title').setAttribute("placeholder", "제목");
+  document.getElementById('id_tutor_name').setAttribute("placeholder", "이름");
+  document.getElementById('id_tutor_num').setAttribute("placeholder", "전화번호");
+  document.getElementById('id_tutor_career').setAttribute("placeholder", "경력");
+  document.getElementById('id_class_info').setAttribute("placeholder", "수업소개");
+</script>
+{% endif %}
+{% endblock %}

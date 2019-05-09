@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+
+{% load static %}
+{% block content %}
+
+<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+    <div class="d-flex flex-column h-100 justify-content-center align-items-center">
+     <h1 class = 'cover_title text-white'>전공 공부 혼자 따라가기 힘들죠?</h1>
+     <h3 class='cover_text text-white'>선배, 동기와 함께 공부해보아요</h3>
+     </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-flex flex-column h-100 justify-content-center align-items-center">
+     <h1 class = 'cover_title text-white'>전공생, 현직자가 알려주는</h1>
+     <h3 class='cover_text text-white'>왕초보 프로그래밍 강의</h3>
+     </div>
+    </div>
+    <div class="carousel-item">
+      <div class="d-flex flex-column h-100 justify-content-center align-items-center">
+     <h1 class = 'cover_title text-white'>당신의 일상을 채워주는</h1>
+     <h3 class='cover_text text-white'>Campus 속 취미 클래스</h3>
+     </div>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+  </div>
+</section>
+<div class="w3-container" align="center">
+  <div class="w3-bar w3-black blocking">
+    <button class="w3-bar-item w3-button tablink w3-red" onclick="openCate(event,'majorlanguage')">전공/언어</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCate(event,'workdevelop')">실무/개발</button>
+    <button class="w3-bar-item w3-button tablink" onclick="openCate(event,'hobby')">취미</button>
+  </div>
+  <div id="majorlanguage" class="w3-container w3-border cate">
+      <section class = "clubs">
+        <div class="container">
+          <div class="row">
+            <!--여기에 for문 시작하는 코드  -->
+            {% for post in posts %}
+            {% if post.category == "M" %}
+            <div class="col-lg-4 col-sm-12">
+              <div class="card">
+                {% if post.image %}
+                
+                <img src ="{{post.image.url}}" class="card-img-top">
+                
+                {% else %}
+                <img src ="static/blog/image/banner.jpg">
+                {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href = "{% url 'class_detail' index=post.pk %}">{{post.title}}</a>
+                  </h5>
+                  <p class="card-text">{{post.class_info}}</p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+    </div>
+  <div id="workdevelop" class="w3-container w3-border cate" style="display:none">
+    <section class = "clubs">
+        <div class="container">
+          <div class="row">
+            <!--여기에 for문 시작하는 코드  -->
+            {% for post in posts %}
+            {% if post.category == "W" %}
+            <div class="col-lg-4 col-sm-12">
+              <div class="card">
+                
+                {% if post.image %}
+                <img src ="{{post.image.url}}" class="card-img-top">
+                {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href = "{% url 'class_detail' index=post.pk %}">{{post.title}}</a>
+                  </h5>
+                  <p class="card-text">{{post.class_info}}</p>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+  </div>
+  <div id="hobby" class="w3-container w3-border cate" style="display:none">
+    <section class = "clubs">
+        <div class="container">
+          <div class="row">
+            <!--여기에 for문 시작하는 코드  -->
+            {% for post in posts %}
+            {% if post.category == "H" %}
+            <div class="col-lg-4 col-sm-12">
+              <div class="card">
+                {% if post.image %}
+                <img src ="{{post.image.url}}" class="card-img-top">
+                {% endif %}
+                <div class="card-body">
+                  <h5 class="card-title">
+                    <a href = "{% url 'class_detail' index=post.pk %}">{{post.title}}</a>
+                  </h5>
+                  <p class="card-text">{{post.class_info}}</p>
+                </div>
+              </div>
+            </div>
+            <!-- 여기에 endfor -->
+            {% endif %}
+            {% endfor %}
+          </div>
+        </div>
+      </section>
+  </div>
+</div>
+<script>
+function openCate(evt, category) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("cate");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+    tablinks[i].className = tablinks[i].className.replace(" w3-red", "");
+  }
+  document.getElementById(category).style.display = "block";
+  evt.currentTarget.className += " w3-red";
+}
+</script>
+{% endblock %}

@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% if user.is_authenticated %}
+<center>
+<div class="requestpost">
+<form method="POST" class="post-form">{% csrf_token %}
+    {{form.as_p}}
+    <button id="class_request_button" type = "submit">등록하기</button>
+</form>
+</div>
+{% endif %}
+<div class="request_div">
+{% for post in posts %}
+    <div class = "class_request">
+    {% if post.category == "M" %}
+    <div class = "requestleft">전공/언어</div> 
+    {% elif post.category == "W" %}
+    <div class = "requestleft">실무/개발</div> 
+    {% else %}
+    <div class = "requestleft">취미</div> 
+    {% endif %}
+    <div class="requestcenter">{{post.title}}</div> 
+    <hr>
+    </div>
+{% endfor %}
+</div>
+</center>
+<script>
+    document.getElementById("id_title").setAttribute("placeholder", "희망강좌 내용");
+    document.getElementById("id_writer").setAttribute("placeholder", "작성자");
+</script>
+{% endblock %}
