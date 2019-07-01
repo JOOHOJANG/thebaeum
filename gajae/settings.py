@@ -102,12 +102,12 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-EMAIL_HOST = 'smtp.mailgun.org'
-EMAIL_HOST_USER = 'do_not_reply@tronze.me'
-EMAIL_HOST_PASSWORD = '@kjw0102'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Gajae <do_not_reply@tronze.me>'
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
+EMAIL_PORT = 
+EMAIL_USE_TLS = 
+DEFAULT_FROM_EMAIL = ''
 
 LOGIN_REDIRECT_URL ='/admin'
 
