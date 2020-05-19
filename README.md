@@ -1,42 +1,29 @@
+## 더:배움 (멋쟁이사자처럼 7기 봄학기 복커톤)
 
-     ,-----.,--.                  ,--. ,---.   ,--.,------.  ,------.
-    '  .--./|  | ,---. ,--.,--. ,-|  || o   \  |  ||  .-.  \ |  .---'
-    |  |    |  || .-. ||  ||  |' .-. |`..'  |  |  ||  |  \  :|  `--, 
-    '  '--'\|  |' '-' ''  ''  '\ `-' | .'  /   |  ||  '--'  /|  `---.
-     `-----'`--' `---'  `----'  `---'  `--'    `--'`-------' `------'
-    ----------------------------------------------------------------- 
+### 설명
 
+- 가재 Team 멋쟁이 사자처럼 7기 봄학기 복커톤(해커톤)
+- 재능기부 플랫폼 제작 (배포X)
 
-Welcome to your Django project on Cloud9 IDE!
+### 역할
 
-Your Django project is already fully setup. Just click the "Run" button to start
-the application. On first run you will be asked to create an admin user. You can
-access your application from 'https://gajae-jayjangjoo.c9users.io/' and the admin page from 
-'https://gajae-jayjangjoo.c9users.io/admin'.
+- 주호 : front-end
+- 미정 : back-end
+- 지연 : back-end
+- 현귀 : 기획/발표
 
-## Starting from the Terminal
+### 기술스택
 
-In case you want to run your Django application from the terminal just run:
+- HTML
+- CSS
+- JavaScript
+- Python
+- BootStrap
+- Django
 
-1) Run syncdb command to sync models to database and create Django's default superuser and auth system
+### 내용
 
-    $ python manage.py migrate
+- C9계정이 종료되어서 아래 동영상으로 내용 확인 가능.. 
 
-2) Run Django
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Euo-2JzkE8E" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-    $ python manage.py runserver $IP:$PORT
-    
-## Configuration
-
-You can configure your Python version and `PYTHONPATH` used in
-Cloud9 > Preferences > Project Settings > Language Support.
-
-## Support & Documentation
-
-Django docs can be found at https://www.djangoproject.com/
-
-You may also want to follow the Django tutorial to create your first application:
-https://docs.djangoproject.com/en/1.9/intro/tutorial01/
-
-Visit http://docs.c9.io for support, or to learn more about using Cloud9 IDE.
-To watch some training videos, visit http://www.youtube.com/user/c9ide
